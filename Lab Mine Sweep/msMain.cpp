@@ -3,7 +3,7 @@
 wxBEGIN_EVENT_TABLE(msMain, wxFrame)
 wxEND_EVENT_TABLE()
 
-msMain::msMain() : wxFrame(nullptr, wxID_ANY, "Mine Sweeper GUI tutorial", wxPoint(30, 30), wxSize(800, 600))
+msMain::msMain() : wxFrame(nullptr, wxID_ANY, "Mine Sweeper Lab", wxPoint(30, 30), wxSize(800, 600))
 {
 	btn = new wxButton*[nFieldWidth * nFieldHeight];
 	wxGridSizer* grid = new wxGridSizer(nFieldWidth, nFieldHeight, 0, 0);
