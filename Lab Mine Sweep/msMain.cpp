@@ -5,10 +5,6 @@ wxEND_EVENT_TABLE()
 
 msMain::msMain() : wxFrame(nullptr, wxID_ANY, "Mine Sweeper GUI tutorial", wxPoint(30, 30), wxSize(800, 600))
 {
-	/*m_btn1 = new wxButton(this, 10001, "Click Me", wxPoint(10,10), wxSize(150, 50));
-	m_txt1 = new wxTextCtrl(this, wxID_ANY, "", wxPoint(10, 70), wxSize(300, 30));
-	m_list1 = new wxListBox(this, wxID_ANY, wxPoint(10, 110), wxSize(300, 300));*/
-
 	btn = new wxButton*[nFieldWidth * nFieldHeight];
 	wxGridSizer* grid = new wxGridSizer(nFieldWidth, nFieldHeight, 0, 0);
 
@@ -40,7 +36,6 @@ msMain::~msMain()
 
 void msMain :: OnButtonClicked(wxCommandEvent& evt)
 {
-	//m_list1->AppendString(m_txt1->GetValue());
 	int x = (evt.GetId() - 10000) % nFieldWidth;
 	int y = (evt.GetId() - 10000) / nFieldWidth;
 
